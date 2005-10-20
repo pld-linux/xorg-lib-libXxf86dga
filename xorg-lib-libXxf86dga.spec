@@ -2,13 +2,13 @@ Summary:	Xxf86dga library
 Summary(pl):	Biblioteka Xxf86dga
 Name:		xorg-lib-libXxf86dga
 Version:	0.99.1
-Release:	0.02
+Release:	0.1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXxf86dga-%{version}.tar.bz2
 # Source0-md5:	25f930d0e8a2717cdcc149a4f1d387b8
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
@@ -77,6 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
+	libmandir=%{_mandir}/man3 \
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
@@ -87,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
+%doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXxf86dga.so.*.*.*
 
 %files devel
@@ -95,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libXxf86dga.so
 %{_libdir}/libXxf86dga.la
 %{_pkgconfigdir}/xxf86dga.pc
-%{_mandir}/man3x/*.3x*
+%{_mandir}/man3/*.3x*
 
 %files static
 %defattr(644,root,root,755)

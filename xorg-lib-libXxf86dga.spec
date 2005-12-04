@@ -24,8 +24,8 @@ Xxf86dga library.
 Biblioteka Xxf86dga.
 
 %package devel
-Summary:	Header files libXxf86dga development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXxf86dga
+Summary:	Header files for libXxf86dga library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXxf86dga
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -35,7 +35,7 @@ Requires:	xorg-proto-xf86dgaproto-devel
 Xxf86dga library.
 
 This package contains the header files needed to develop programs that
-use these libXxf86dga.
+use libXxf86dga.
 
 %description devel -l pl
 Biblioteka Xxf86dga.

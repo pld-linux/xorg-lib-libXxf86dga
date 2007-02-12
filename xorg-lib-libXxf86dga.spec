@@ -1,5 +1,5 @@
 Summary:	Xxf86dga library
-Summary(pl.UTF-8):   Biblioteka Xxf86dga
+Summary(pl.UTF-8):	Biblioteka Xxf86dga
 Name:		xorg-lib-libXxf86dga
 Version:	1.0.1
 Release:	3
@@ -25,7 +25,7 @@ Biblioteka Xxf86dga.
 
 %package devel
 Summary:	Header files for libXxf86dga library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXxf86dga
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXxf86dga
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -45,7 +45,7 @@ używających biblioteki libXxf86dga.
 
 %package static
 Summary:	Static libXxf86dga library
-Summary(pl.UTF-8):   Biblioteka statyczna libXxf86dga
+Summary(pl.UTF-8):	Biblioteka statyczna libXxf86dga
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 

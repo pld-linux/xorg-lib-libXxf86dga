@@ -1,5 +1,5 @@
 Summary:	Xxf86dga library
-Summary(pl):	Biblioteka Xxf86dga
+Summary(pl.UTF-8):   Biblioteka Xxf86dga
 Name:		xorg-lib-libXxf86dga
 Version:	1.0.1
 Release:	3
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Xxf86dga library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka Xxf86dga.
 
 %package devel
 Summary:	Header files for libXxf86dga library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXxf86dga
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXxf86dga
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -37,15 +37,15 @@ Xxf86dga library.
 This package contains the header files needed to develop programs that
 use libXxf86dga.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka Xxf86dga.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXxf86dga.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXxf86dga.
 
 %package static
 Summary:	Static libXxf86dga library
-Summary(pl):	Biblioteka statyczna libXxf86dga
+Summary(pl.UTF-8):   Biblioteka statyczna libXxf86dga
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -54,10 +54,10 @@ Xxf86dga library.
 
 This package contains the static libXxf86dga library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka Xxf86dga.
 
-Pakiet zawiera statyczn± bibliotekê libXxf86dga.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXxf86dga.
 
 %prep
 %setup -q -n libXxf86dga-%{version}

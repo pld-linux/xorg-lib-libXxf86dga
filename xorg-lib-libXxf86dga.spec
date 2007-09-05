@@ -1,27 +1,28 @@
-Summary:	Xxf86dga library
-Summary(pl.UTF-8):	Biblioteka Xxf86dga
+Summary:	XFree86-DGA extension library
+Summary(pl.UTF-8):	Biblioteka rozszerzenia XFree86-DGA
 Name:		xorg-lib-libXxf86dga
-Version:	1.0.1
-Release:	3
+Version:	1.0.2
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-%{version}.tar.bz2
-# Source0-md5:	5b0e752c71a23e9d1290cad44a7c7c75
+# Source0-md5:	6f5f621804ee652b6cc6f2025c517c78
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-proto-xf86dgaproto-devel
+BuildRequires:	xorg-proto-xf86dgaproto-devel >= 2.0.3
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Xxf86dga library.
+XFree86-DGA (Direct Graphics Access) extension library.
 
 %description -l pl.UTF-8
-Biblioteka Xxf86dga.
+Biblioteka rozszerzenia XFree86-DGA (Direct Graphics Access -
+bezpośredniego dostępu do grafiki).
 
 %package devel
 Summary:	Header files for libXxf86dga library
@@ -32,14 +33,10 @@ Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-xf86dgaproto-devel
 
 %description devel
-Xxf86dga library.
-
 This package contains the header files needed to develop programs that
 use libXxf86dga.
 
 %description devel -l pl.UTF-8
-Biblioteka Xxf86dga.
-
 Pakiet zawiera pliki nagłówkowe niezbędne do kompilowania programów
 używających biblioteki libXxf86dga.
 
@@ -50,13 +47,9 @@ Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Xxf86dga library.
-
 This package contains the static libXxf86dga library.
 
 %description static -l pl.UTF-8
-Biblioteka Xxf86dga.
-
 Pakiet zawiera statyczną bibliotekę libXxf86dga.
 
 %prep

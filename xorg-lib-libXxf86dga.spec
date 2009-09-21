@@ -1,19 +1,19 @@
 Summary:	XFree86-DGA extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia XFree86-DGA
 Name:		xorg-lib-libXxf86dga
-Version:	1.0.99.1
+Version:	1.0.99.2
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-%{version}.tar.bz2
-# Source0-md5:	de75bfb5a399af5df158a6dba203205b
+# Source0-md5:	ca6405a5cf7de14211ff743b9a25370e
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-proto-xf86dgaproto-devel >= 2.0.3
+BuildRequires:	xorg-proto-xf86dgaproto-devel >= 2.0.99.2
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

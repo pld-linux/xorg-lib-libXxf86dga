@@ -1,5 +1,5 @@
-Summary:	XFree86-DGA extension library
-Summary(pl.UTF-8):	Biblioteka rozszerzenia XFree86-DGA
+Summary:	XFree86-DGA extension client library
+Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XFree86-DGA
 Name:		xorg-lib-libXxf86dga
 Version:	1.1
 Release:	1
@@ -14,14 +14,14 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-xf86dgaproto-devel >= 2.0.99.2
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-XFree86-DGA (Direct Graphics Access) extension library.
+XFree86-DGA (Direct Graphics Access) extension client library.
 
 %description -l pl.UTF-8
-Biblioteka rozszerzenia XFree86-DGA (Direct Graphics Access -
+Biblioteka kliencka rozszerzenia XFree86-DGA (Direct Graphics Access -
 bezpośredniego dostępu do grafiki).
 
 %package devel
@@ -80,16 +80,20 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXxf86dga.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXxf86dga.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXxf86dga.so
 %{_libdir}/libXxf86dga.la
-%{_includedir}/X11/extensions/*.h
+%{_includedir}/X11/extensions/Xxf86dga.h
+%{_includedir}/X11/extensions/xf86dga1.h
 %{_pkgconfigdir}/xxf86dga.pc
-%{_mandir}/man3/*.3x*
+%{_mandir}/man3/XDGA*.3x*
+%{_mandir}/man3/XF86DGA.3x*
+%{_mandir}/man3/XFree86-DGA.3x*
 
 %files static
 %defattr(644,root,root,755)

@@ -30,7 +30,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXxf86dga
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
-Requires:	xorg-proto-xf86dgaproto-devel
+Requires:	xorg-proto-xf86dgaproto-devel >= 2.0.99.2
 
 %description devel
 This package contains the header files needed to develop programs that

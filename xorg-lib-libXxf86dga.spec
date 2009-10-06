@@ -1,12 +1,12 @@
 Summary:	XFree86-DGA extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XFree86-DGA
 Name:		xorg-lib-libXxf86dga
-Version:	1.1
+Version:	1.1.1
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-%{version}.tar.bz2
-# Source0-md5:	6e3da66b0594ae1d5240e5be8ee64b32
+# Source0-md5:	368837d3d7a4d3b4f70be48383e3544e
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake

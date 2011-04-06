@@ -2,7 +2,7 @@ Summary:	XFree86-DGA extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XFree86-DGA
 Name:		xorg-lib-libXxf86dga
 Version:	1.1.2
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-%{version}.tar.bz2
@@ -71,6 +71,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -86,7 +88,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXxf86dga.so
-%{_libdir}/libXxf86dga.la
 %{_includedir}/X11/extensions/Xxf86dga.h
 %{_includedir}/X11/extensions/xf86dga1.h
 %{_pkgconfigdir}/xxf86dga.pc

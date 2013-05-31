@@ -1,12 +1,12 @@
 Summary:	XFree86-DGA extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XFree86-DGA
 Name:		xorg-lib-libXxf86dga
-Version:	1.1.3
+Version:	1.1.4
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-%{version}.tar.bz2
-# Source0-md5:	b7f38465c46e7145782d37dbb9da8c09
+# Source0-md5:	d7dd9b9df336b7dd4028b6b56542ff2c
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -72,6 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
+# there's no man3x in pld
+grep -rl man3x $RPM_BUILD_ROOT%{_mandir}/man3/* | xargs %{__sed} -i -e 's,man3x,man3,'
 
 %clean
 rm -rf $RPM_BUILD_ROOT

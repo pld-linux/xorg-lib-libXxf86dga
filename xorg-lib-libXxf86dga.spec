@@ -95,9 +95,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/X11/extensions/Xxf86dga.h
 %{_includedir}/X11/extensions/xf86dga1.h
 %{_pkgconfigdir}/xxf86dga.pc
-%{_mandir}/man3/XDGA*.3x*
-%{_mandir}/man3/XF86DGA.3x*
-%{_mandir}/man3/XFree86-DGA.3x*
+%{_mandir}/man3/XDGA*.3*
+%{_mandir}/man3/XF86DGA.3*
+%{_mandir}/man3/XFree86-DGA.3*
 
 %files static
 %defattr(644,root,root,755)

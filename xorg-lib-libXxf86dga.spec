@@ -1,21 +1,25 @@
 Summary:	XFree86-DGA extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia XFree86-DGA
 Name:		xorg-lib-libXxf86dga
-Version:	1.1.4
-Release:	2
+Version:	1.1.5
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-%{version}.tar.bz2
-# Source0-md5:	d7dd9b9df336b7dd4028b6b56542ff2c
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-%{version}.tar.bz2
+# Source0-md5:	0ddeafc13b33086357cfa96fae41ee8e
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	sed >= 4.0
+BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xf86dgaproto-devel >= 2.0.99.2
+BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+Requires:	xorg-lib-libX11 >= 1.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,6 +34,7 @@ Summary:	Header files for libXxf86dga library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXxf86dga
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-xf86dgaproto-devel >= 2.0.99.2
 
@@ -85,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libXxf86dga.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXxf86dga.so.1
 
